@@ -1,12 +1,14 @@
 package service;
 
+import model.Employee;
+
 import java.util.List;
 
 public interface EmployeeDao {
-   Integer add (Employee employee);
+   void add (Employee employee);
     Employee getById(int id);
     List<Employee> getAllEmployee();
-    void deleteEmployee(Employee employee);
+    void deleteEmployee(int id);
     void updateEmployee(int id, Employee employee);
 }
 
