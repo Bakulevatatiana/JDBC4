@@ -57,7 +57,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
                 public List<Employee> getAllEmployee(){
                     List<Employee> employees=new ArrayList<>();
                     try(PreparedStatement statement=ConnectionConfig.getConnection().prepareStatement(
-                            "SELECT * FROM employee INNER JOIN city"+"ON employee.city_id=city.city_id" ))
+                            "SELECT * FROM employee INNER JOIN city "+" ON employee.city_id=city.city_id" ))
                     {
 
                             ResultSet resultSet=statement.executeQuery();
